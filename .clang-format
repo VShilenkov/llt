@@ -1,0 +1,172 @@
+---
+Language:        Cpp
+Standard:        Cpp11
+DisableFormat:   false
+ColumnLimit:     120
+
+# -------------------------------------------------------------------- Indention
+IndentWidth:                        4
+ContinuationIndentWidth:            4
+IndentCaseLabels:                   false
+IndentPPDirectives:                 AfterHash
+IndentWrappedFunctionNames:         false
+AccessModifierOffset:               -4
+ConstructorInitializerIndentWidth:  4
+NamespaceIndentation:               None
+
+# -------------------------------------------------------------------- Alignment
+AlignAfterOpenBracket:          Align
+AlignConsecutiveAssignments:    true
+AlignConsecutiveDeclarations:   true
+AlignEscapedNewlines:           Left
+AlignOperands:                  true
+AlignTrailingComments:          true
+
+# -------------------------------------------------- Short instructions per line
+AllowShortBlocksOnASingleLine:      false
+AllowShortCaseLabelsOnASingleLine:  false
+AllowShortFunctionsOnASingleLine:   Inline
+AllowShortLoopsOnASingleLine:       false
+
+# ------------------------------------------------------------------ Bin Packing
+BinPackArguments:                   false
+BinPackParameters:                  false
+ExperimentalAutoDetectBinPacking:   false
+
+# ----------------------------------------------------------------------- Breaks
+AlwaysBreakAfterReturnType:         None
+AlwaysBreakBeforeMultilineStrings:  false
+AlwaysBreakTemplateDeclarations:    Yes
+
+BreakBeforeBraces:          Custom
+BraceWrapping:
+  AfterControlStatement:    true
+  AfterEnum:                true
+  AfterFunction:            true
+  AfterStruct:              true
+  AfterUnion:               true
+  AfterExternBlock:         false
+  BeforeElse:               true
+  IndentBraces:             false
+  SplitEmptyFunction:       false
+  SplitEmptyRecord:         false
+  AfterClass:               true
+  AfterNamespace:           false
+  AfterObjCDeclaration:     false
+  BeforeCatch:              true
+  SplitEmptyNamespace:      false
+
+BreakBeforeBinaryOperators:                 NonAssignment
+BreakBeforeTernaryOperators:                true
+BreakStringLiterals:                        true
+BreakConstructorInitializers:               BeforeComma
+BreakConstructorInitializersBeforeComma:    true
+BreakBeforeInheritanceComma:                true
+BreakInheritanceList:                       BeforeComma
+BreakAfterJavaFieldAnnotations:             false
+
+# ----------------------------------------------------------- Namespace settings
+CompactNamespaces:      false
+FixNamespaceComments:   true
+
+# --------------------------------------------------------------------- Pointers
+PointerAlignment:       Right
+DerivePointerAlignment: false
+
+# --------------------------------------------------------------- Macro settings
+ForEachMacros:
+#  - foreach
+#  - Q_FOREACH
+#  - BOOST_FOREACH
+
+MacroBlockBegin: ''
+MacroBlockEnd:   ''
+
+# -------------------------------------- Sorting includes and using declarations
+SortUsingDeclarations: true
+
+SortIncludes:       true
+IncludeBlocks:      Regroup
+IncludeIsMainRegex: '$'
+
+IncludeCategories: 
+  - Regex:      '<[-_a-zA-Z0-9]+>'
+    Priority:   10
+  - Regex:      '^<[-_a-zA-Z0-9/]+>'
+    Priority:   11
+  - Regex:      '^<[-_a-zA-Z0-9]+\.h>'
+    Priority:   20
+  - Regex:      '^<[-_a-zA-Z0-9/]+\.h>'
+    Priority:   21
+  - Regex:      '^<[-_a-zA-Z0-9]+\.hpp>'
+    Priority:   30
+  - Regex:      '^<[-_a-zA-Z0-9/]+\.hpp>'
+    Priority:   31
+  - Regex:      '^"[-_a-zA-Z0-9]+\.hpp"'
+    Priority:   40
+  - Regex:      '^"[-_a-zA-Z0-9/]+\.hpp"'
+    Priority:   41
+  - Regex:      '^"[-_a-zA-Z0-9]+\.h"'
+    Priority:   50
+  - Regex:      '^"[-_a-zA-Z0-9/]+\.h"'
+    Priority:   51
+  - Regex:      '.*'
+    Priority:   100
+#  - Regex:           '^"(llvm|llvm-c|clang|clang-c)/'
+#    Priority:        2
+#  - Regex:           '^(<|"(gtest|gmock|isl|json)/)'
+#    Priority:        3
+
+# ------------------------------------------------------------------ Empty lines
+KeepEmptyLinesAtTheStartOfBlocks:   false
+MaxEmptyLinesToKeep:                1
+
+# -------------------------------------------------------------------- Penalties
+PenaltyBreakAssignment:                 10
+PenaltyBreakBeforeFirstCallParameter:   200
+PenaltyBreakComment:                    50
+PenaltyBreakFirstLessLess:              120
+PenaltyBreakString:                     100
+PenaltyBreakTemplateDeclaration:        10
+PenaltyExcessCharacter:                 100
+PenaltyReturnTypeOnItsOwnLine:          80
+
+# ----------------------------------------------------------------------- Spaces
+SpaceAfterCStyleCast:               false
+SpaceBeforeParens:                  ControlStatements
+SpacesInCStyleCastParentheses:      false
+SpaceAfterTemplateKeyword:          false
+SpaceBeforeAssignmentOperators:     true
+SpaceBeforeCpp11BracedList:         false
+SpaceBeforeCtorInitializerColon:    true
+SpaceBeforeInheritanceColon:        true
+SpaceBeforeRangeBasedForLoopColon:  true
+SpaceInEmptyParentheses:            true
+SpacesBeforeTrailingComments:       4
+SpacesInAngles:                     false
+SpacesInContainerLiterals:          false
+SpacesInParentheses:                false
+SpacesInSquareBrackets:             false
+
+# ------------------------------------------------------------------------- Tabs
+TabWidth:   8
+UseTab:     Never
+
+# --------------------------------------------------------- Objective-C specific
+ObjCBinPackProtocolList:        Auto
+ObjCBlockIndentWidth:           2
+ObjCSpaceAfterProperty:         false
+ObjCSpaceBeforeProtocolList:    true
+
+# ---------------------------------------------------------- JavaScript specific
+JavaScriptQuotes:       Leave
+JavaScriptWrapImports:  true
+
+# --------------------------------------------------------------------- Comments
+ReflowComments: true
+CommentPragmas: '^ IWYU pragma:'
+
+# ------------------------------------------------------------------------ Other
+AllowAllParametersOfDeclarationOnNextLine:      false
+ConstructorInitializerAllOnOneLineOrOnePerLine: false
+Cpp11BracedListStyle:                           true
