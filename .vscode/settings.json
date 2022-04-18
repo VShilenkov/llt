@@ -1,4 +1,8 @@
 {
+    "cmake.configureSettings": {
+        "WITH_PROGRESS" : "true",
+        "CUSTOM_GMP" : "6.2.1/untuned"
+    },
     "files.associations": {
         "chrono": "cpp"
     }

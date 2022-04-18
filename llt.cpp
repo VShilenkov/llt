@@ -39,7 +39,9 @@ static const std::vector<std::vector<uint64_t>>
               77232917LU,
               82589933LU}};
 
-static char mod_str[6972593LU + 2] = {0};
+constexpr uint64_t mod_str_len = 13466917LU + 1;
+
+static char mod_str[mod_str_len + 1] = {0};
 
 mpz_class make_mod(long n)
 {
@@ -196,7 +198,7 @@ bool llt_3(const uint64_t &n)
     for (uint64_t i{2}; i < n; ++i)
     {
 #ifdef PROGRESS
-        pb(i);
+        pb(i - 2);
 #endif
         h *= h;
         h -= 2;
@@ -224,8 +226,8 @@ void test(const uint64_t &n, llt_function llt)
 // main driver
 int main( )
 {
-    memset(mod_str, '1', 6972593LU + 1);
-    constexpr uint8_t exponent{7};
-    for (auto i : mersenne[exponent - 1])
-        test(i, &llt_3);
+    memset(mod_str, '1', mod_str_len);
+    constexpr uint8_t exponent{8};
+    //for (auto i : mersenne[exponent - 1])
+    test(mersenne[exponent - 1].front(), &llt_3);
 }
